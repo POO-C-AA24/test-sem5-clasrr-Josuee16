@@ -34,7 +34,7 @@ public class testTerreno {
         int i = 0;
         String opc;
         while (true) {
-            System.out.println("Dame el alto, ancho y vmc");
+            System.out.println("Dame el alto, ancho y vmc: ");
             arrayTerrenos[i] = new Terreno(tc.nextDouble(), tc.nextDouble(), tc.nextDouble());
             i++;
             System.out.println("Desea mas terrenos(S/N)?");
@@ -42,11 +42,13 @@ public class testTerreno {
             if (opc.equals("N") || (i >= arrayTerrenos.length)) {
                 break;
             }
-            for (Terreno terr :arrayTerrenos){
-                terr.calcularArea();
-                terr.calcularCostoFinal();
-                System.out.println(terr);
-            }
+
+        }
+        System.out.println("LOS TERRENOS INGRESADOS Y CALCULADOS SON:");
+        for (Terreno terr : arrayTerrenos) {
+            terr.calcularArea();
+            terr.calcularCostoFinal();
+            System.out.println(terr);
         }
 
     }
